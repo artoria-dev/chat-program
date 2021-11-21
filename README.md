@@ -1,15 +1,18 @@
 # Chat Program
 
-Too lazy to add stuff here.. I'll do it later.
-
+Pro Vortrag 10-15 Min pro Prüfling
+Pro Vortrag ein Handout (Eriks Freundin)
 
 ## OOP2
 
 - Netzwerk funktionalitäten erklären
-- Programm vorführen
 - Server & Client - Prinzip
+- Was ist Netzwerk? Was ist Server-Client?
+- Programm vorführen
 
 ## RE
 
-- Anforderungen eines Kommandozeilen Chats
-- UML/User Stories/Umfrage in Freundeskreis
+- Wir sind Entwickler, keine User
+- Umfrage nach Anforderungen -> auflisten
+- User Stories erstellen
+- UML erstellen
