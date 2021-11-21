@@ -1,9 +1,15 @@
-# Chat program
+# Chat Program
 
-## OOP 2 
-Netzwerk funktionalitäten erklären
-Programm vorführen
+Too lazy to add stuff here.. I'll do it later.
 
-## REQ
-Anforderungen eines Kommandozeilen Chats
-UML/User Stories/Umfrage in Freundeskreis
+
+## OOP2
+
+- Netzwerk funktionalitäten erklären
+- Programm vorführen
+- Server & Client - Prinzip
+
+## RE
+
+- Anforderungen eines Kommandozeilen Chats
+- UML/User Stories/Umfrage in Freundeskreis
