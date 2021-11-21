@@ -11,6 +11,7 @@
 - Server & Client - Prinzip
 - Was ist Netzwerk? Was ist Server-Client?
 - Programm vorführen
+- Server: erstellt Log.csv | User erhält Log bei Anmeldung -> lokale Log wird überschrieben
 
 ## RE
 
@@ -18,3 +19,4 @@
 - Umfrage nach Anforderungen -> auflisten
 - User Stories erstellen
 - UML erstellen
+- eventuelle Anforderungsdiskussion: Log nur auf Server oder nur auf Clients?
