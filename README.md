@@ -1,7 +1,7 @@
 # Chat Program
 
-Pro Vortrag 10-15 Min pro Prüfling
-Pro Vortrag ein Handout (Eriks Freundin)
+- Pro Vortrag 10-15 Min pro Prüfling
+- Pro Vortrag ein Handout (Eriks Freundin)
 
 ## OOP2
 
