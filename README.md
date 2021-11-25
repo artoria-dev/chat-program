@@ -1,12 +1,16 @@
 # Chat Programm
 
+*Allgemeine Anforderungen*
+- Pro Vortrag 10-15 Min pro Prüfling
+- Pro Vortrag ein Handout (Eriks Freundin)
+
 *OOP2*
 - Thema: Chat Programm zur Demo vernetzter Anwendungen in Java
 - Termin: 20.1
 
-- Pro Vortrag 10-15 Min pro Prüfling
-- Pro Vortrag ein Handout (Eriks Freundin)
-- RE Vortrag 23.12 - 13.1
+*RE*
+- Thema:
+- Termin: 
 
 ## OOP2
 
