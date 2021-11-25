@@ -9,8 +9,8 @@
 - Termin: 20.1
 
 *RE*
-- Thema:
-- Termin: 
+- Thema: Anforderungen für ein Chat-Programm (UML)
+- Termin: 23.12
 
 ## OOP2
 
