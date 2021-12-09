@@ -1,4 +1,4 @@
-# Chat Programm
+# Chat Programm "Chatty"
 
 *Allgemeine Anforderungen*
 - Pro Vortrag 10-15 Min pro Prüfling
