@@ -12,6 +12,9 @@
 - Thema: Anforderungen für ein Chat-Programm (UML)
 - Termin: 23.12
 
+*Marketing
+- ???
+
 ## OOP2
 
 - Netzwerk funktionalitäten erklären
@@ -27,3 +30,7 @@
 - User Stories erstellen
 - UML erstellen
 - eventuelle Anforderungsdiskussion: Log nur auf Server oder nur auf Clients?
+
+## Marketing
+
+- ???
