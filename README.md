@@ -12,7 +12,7 @@
 - Thema: Anforderungen für ein Chat-Programm (UML)
 - Termin: 23.12
 
-*Marketing
+*Marketing*
 - ???
 
 ## OOP2
