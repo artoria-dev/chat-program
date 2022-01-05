@@ -10,7 +10,7 @@
 
 *RE*
 - Thema: Anforderungen für ein Chat-Programm (UML)
-- Termin: 23.12
+- Termin: 13.1
 
 *Marketing*
 - ???
