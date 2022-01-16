@@ -74,7 +74,7 @@ public class Chat {
         frame.remove(login);
 
         // changing frame attributes
-        frame.setTitle("Chat | v0.6 | User: " + usr_name);
+        frame.setTitle("Chad | v0.6 | User: " + usr_name);
         frame.setSize(450, 400);
 
         // set text area in the middle
