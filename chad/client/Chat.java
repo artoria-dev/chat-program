@@ -52,7 +52,7 @@ public class Chat {
                 nio.connect();
                 // checks if connection resolves
                 if (nio.getStatus()) {
-                    nio.start();
+                    nio.listen();
                     // calls mainWindow methode
                     mainWindow(frame, nickname, server, login, nio); // pass frame and elements to be able to remove elements on new view
                 }
