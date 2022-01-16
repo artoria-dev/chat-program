@@ -1,4 +1,4 @@
-# Chat Programm "Chatty"
+# Chat Programm "Chad"
 
 *Allgemeine Anforderungen*
 - Pro Vortrag 10-15 Min pro Prüfling
@@ -10,10 +10,11 @@
 
 *RE*
 - Thema: Anforderungen für ein Chat-Programm (UML)
-- Termin: 13.1
+- Termin: 3.2
 
 *Marketing*
-- ???
+- Thema: Chad-Start-Up
+- Termin: 4.2
 
 ## OOP2
 
