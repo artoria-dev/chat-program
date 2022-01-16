@@ -1,11 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Chat {
-
-    // array to store local message log
+    // string to store local message log
     String messageCache = "";
 
     // store login name and ip / localhost
@@ -18,12 +16,23 @@ public class Chat {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 105);
 
-        // text boxes for server and nickname
-        // TODO: make text ghost text / onclick empty textboxes
+        // add nickname text box
         JTextField nickname = new JTextField();
-        nickname.setText("user");
+        // add ghost text
+        nickname.setText("Type your username..");
 
+        // add mouse on click listener to empty ghost text
+        nickname.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                nickname.setText("");
+            }
+        });
+
+        // add server text box
         JTextField server = new JTextField();
+        // put standard server (localhost)
         server.setText("127.0.0.1");
 
         // login button
@@ -33,26 +42,28 @@ public class Chat {
         login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // save inputs from text boxes
                 usr_name = nickname.getText();
                 usr_server = server.getText();
-
-                // TODO: enter drücken
-
                 // network io shit
+                // instantiate client object
                 Client nio = new Client(usr_server, 6000, usr_name);
+                // connecting socket to server
                 nio.connect();
+                // checks if connection resolves
                 if (nio.getStatus()) {
                     nio.start();
+                    // calls mainWindow methode
                     mainWindow(frame, nickname, server, login, nio); // pass frame and elements to be able to remove elements on new view
                 }
             }
         });
 
         // add elements to pane
-        // TODO: make view bigger, change border layouts
         frame.getContentPane().add(BorderLayout.NORTH, nickname);
         frame.getContentPane().add(BorderLayout.CENTER, server);
         frame.getContentPane().add(BorderLayout.SOUTH, login);
+        // set visibility
         frame.setVisible(true);
     }
 
@@ -62,7 +73,7 @@ public class Chat {
         frame.remove(server);
         frame.remove(login);
 
-        // creating main frame
+        // changing frame attributes
         frame.setTitle("Chat | v0.6 | User: " + usr_name);
         frame.setSize(450, 400);
 
@@ -74,19 +85,18 @@ public class Chat {
         JPanel panel = new JPanel(); // the panel is not visible in output
         JLabel label = new JLabel("Message:");
         JTextField tf = new JTextField(25); // accepts upto 25 characters | also sets textbox length
-        JButton send = new JButton("Send");
+        JButton send = new JButton("Send"); // send button
 
         // send button click event
         send.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String textFieldValue = usr_name + ": " + tf.getText(); // get text value from textbox
+                // if input !empty
                 if (!tf.getText().equals("")) {
                     // calls network class | sends msg
                     nio.send(tf.getText());
                     // empties textbox after message sent
                     tf.setText("");
-                    // TODO: Enter drücken
                 }
             }
         });
@@ -106,14 +116,15 @@ public class Chat {
         checkForUpdates(nio, ta);
     }
 
+    // if client is connected to server, receive last sent message
     public void checkForUpdates(Client nio, JTextArea ta) {
         Thread updater = new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("THREAD STARTET");
                 while (nio.getStatus()) {
                     String revMessage = nio.getMessage();
                     if (revMessage != null) {
+                        // if received msg is not null
                         messageManipulator(revMessage, ta);
                     }
                 }
@@ -124,8 +135,11 @@ public class Chat {
 
     public void messageManipulator(String lastMessageReceivedFromServer, JTextArea textArea) {
         if(!lastMessageReceivedFromServer.equals(messageCache)) {
+            // save last received message
             messageCache = lastMessageReceivedFromServer;
+            // set textArea text to (already given text + new message from server)
             textArea.setText(textArea.getText() + lastMessageReceivedFromServer + "\n");
+            // debug terminal output
             System.out.println("Updated Output: " + textArea.getText() + " " + lastMessageReceivedFromServer);
         }
     }
