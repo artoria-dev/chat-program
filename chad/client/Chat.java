@@ -74,12 +74,18 @@ public class Chat {
         frame.remove(login);
 
         // changing frame attributes
-        frame.setTitle("Chad | v0.6 | User: " + usr_name);
+        frame.setTitle("Chad | v0.7 | User: " + usr_name);
         frame.setSize(450, 400);
 
         // set text area in the middle
-        JTextArea ta = new JTextArea();
-        ta.setEditable(false);
+        JTextArea textArea = new JTextArea();
+        textArea.setEditable(false); // make textarea non edible
+        textArea.setWrapStyleWord(true); // make textarea wrap by word
+        textArea.setLineWrap(true); // make textarea wrap lines
+
+        // scroll pane
+        JScrollPane scrollableTextArea = new JScrollPane(textArea);
+        scrollableTextArea.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         // creating bottom panel
         JPanel panel = new JPanel(); // the panel is not visible in output
@@ -109,15 +115,15 @@ public class Chat {
 
         // adding components to main frame
         frame.getContentPane().add(BorderLayout.SOUTH, panel);
-        frame.getContentPane().add(BorderLayout.CENTER, ta);
+        frame.getContentPane().add(BorderLayout.CENTER, scrollableTextArea);
         frame.setVisible(true);
 
         // check for updates
-        checkForUpdates(nio, ta);
+        checkForUpdates(nio, textArea);
     }
 
     // if client is connected to server, receive last sent message
-    public void checkForUpdates(Client nio, JTextArea ta) {
+    public void checkForUpdates(Client nio, JTextArea textArea) {
         Thread updater = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -125,7 +131,7 @@ public class Chat {
                     String revMessage = nio.getMessage();
                     if (revMessage != null) {
                         // if received msg is not null
-                        messageManipulator(revMessage, ta);
+                        messageManipulator(revMessage, textArea);
                     }
                 }
             }
