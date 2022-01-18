@@ -116,6 +116,7 @@ public class Chat {
         // adding components to main frame
         frame.getContentPane().add(BorderLayout.SOUTH, panel);
         frame.getContentPane().add(BorderLayout.CENTER, scrollableTextArea);
+        frame.setSize(450, 400);
         frame.setVisible(true);
 
         // check for updates
