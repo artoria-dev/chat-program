@@ -1,6 +1,7 @@
 /*
-@version: 0.7
-@author Erik Priebe, Tom Jaenicke
+    version: 0.6
+    author: Erik Priebe, Tom Jaenicke
+    Jan 2022
 */
 
 import javax.swing.*;
