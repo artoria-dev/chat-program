@@ -1,3 +1,8 @@
+/*
+@version: 0.7
+@author Erik Priebe, Tom Jaenicke
+*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
