@@ -1,3 +1,9 @@
+/*
+    version: 0.5
+    author: Erik Priebe, Tom Jaenicke
+    Jan 2022
+*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -5,9 +11,6 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-
-// Version 0.5 Server
-// Written by Erik 2022
 
 public class Server // forwards received messages to all connected clients
 {
