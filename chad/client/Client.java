@@ -1,11 +1,14 @@
+/*
+    version: 0.6
+    author: Erik Priebe, Tom Jaenicke
+    Jan 2022
+*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-
-// Version 0.6 Client
-// Written by Erik & Tom 2022
 
 public class Client // sends/receives messages to/from server
 {
